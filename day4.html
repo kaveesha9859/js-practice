@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 4</title>
+</head>
+<body>
+    <h1>Hello DOM</h1>
+    <p id="message">This is a paragraph</p>
+    <button id="myButton">Click me</button>
+
+    <input type="text" id="nameInput" placeholder="Type your name" />
+<button id="greetButton">Greet me</button>
+<p id="greeting"></p>
+
+    <script>
+        console.log("JS is running")
+        let nameInput = document.querySelector("#nameInput")
+let greetButton = document.querySelector("#greetButton")
+let greeting = document.querySelector("#greeting")
+
+greetButton.addEventListener("click", function() {
+    let name = nameInput.value
+    greeting.textContent = `Hello ${name}!`
+})
+    </script>
+</body>

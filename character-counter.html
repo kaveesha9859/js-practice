@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Character Counter</title>
+</head>
+
+<body>
+    <h2>Character Counter</h2>
+    <textarea id="textInput" placeholder="Type something..." rows="5" cols="40"></textarea>
+    <p>Characters used: <span id="count">0</span> / 200</p>
+    <p id="warning"></p>
+
+    <script>
+        let textArea = document.querySelector("#textInput")
+        let countSpan = document.querySelector("#count")
+        let warning = document.querySelector("#warning")
+
+        textArea.addEventListener("input", function () {
+            countSpan.textContent = textArea.value.length
+            if (textArea.value.length >= 200) {
+                warning.textContent = "Limit reached!"
+                warning.style.color = "red"
+            } else if (textArea.value.length >= 180) {
+                warning.textContent = "Almost at limit!"
+                warning.style.color = "orange"
+            } else {
+                warning.textContent = ""
+            }
+        })
+
+    </script>
+</body>
+
+</html>
