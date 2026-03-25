@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id ="btn"> change Color</button>
+
+    <p id="text">Hi im sam</p>
+
+    <script>
+
+        let button = document.querySelector("#btn")
+        let text = document.querySelector("#text")
+
+       button.addEventListener("click",function () {
+            text.style.color = 'blue'
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea id="textInput" placeholder="type something"></textarea>
+    <button id="btn">"Add"</button>
+    <ul id="list"></ul>
+
+    <script>
+        let textArea = document.querySelector("#textInput")
+        let button = document.querySelector("#btn")
+        let list = document.querySelector("#list")
+
+        button.addEventListener("click", function () {
+            let li = document.createElement("li")
+            li.textContent = textArea.value
+            list.appendChild(li)
+
+            textArea.value = ""
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea id="inputNumber" placeholder="Input an number"></textarea>
+    <button id="btn">"Check"</button>
+    <p id="paragraph"></p>
+
+    <script>
+
+        let text = document.querySelector("#inputNumber")
+        let button = document.querySelector("#btn")
+        let paragraph = document.querySelector("#paragraph")
+
+
+        button.addEventListener("click", function () {
+
+            let num = Number(text.value)
+
+            if (num % 2 === 0 && num % 3 === 0) {
+                paragraph.textContent = "Divisible by both 2 and 3"
+            }
+
+            else if (num % 2 === 0) {
+                paragraph.textContent = "Divisible by 2"
+            } else if (num % 3 === 0) {
+                paragraph.textContent = "Divisible by 3"
+            } else {
+                paragraph.textContent = "Not divisible by 2 or 3"
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>

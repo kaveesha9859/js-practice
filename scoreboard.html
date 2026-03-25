@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="playerName" placeholder="Player Name"></textarea>
+    <textarea name="" id="score" placeholder="Score"></textarea>
+    <button id="btn"> Add Player</button>
+    <ul id="list"></ul>
+    <p id="totalScore"></p>
+
+    <script>
+
+        let playerName = document.querySelector("#playerName")
+        let score = document.querySelector("#score")
+        let button = document.querySelector("#btn")
+        let list = document.querySelector("#list")
+
+        let total = 0
+
+        button.addEventListener("click", function () {
+
+            let name = playerName.value
+            let playerScore = Number(score.value)
+
+            let li = document.createElement("li")
+            li.textContent = `${name}- ${playerScore}`
+            list.appendChild(li)
+
+            playerName.value = ""
+            score.value = ""
+
+            total = total + playerScore
+            document.querySelector("#totalScore").textContent = `Total score: ${total}`
+        })
+
+
+    </script>
+</body>
+
+</html>
